@@ -5,7 +5,6 @@ public class ContactHandler {
         
         set<id> ListAccountId=new set<id>();
   
-        
         for(Contact Contacts:NewListContact){ 
             
             if(Contacts.AccountId !=null && OldMap==null) { 
