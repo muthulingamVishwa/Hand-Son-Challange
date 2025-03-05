@@ -105,20 +105,20 @@ If **Account Country** or **Opportunity Type** is NULL, display a **Custom Error
 #### Fetching Approvers
 If both fields are populated, call a **Subflow** to retrieve the approvers.
 
-![Image](https://github.com/user-attachments/assets/1c41b526-f24a-4707-9c07-9e5ce5934674)
+![Image](https://github.com/user-attachments/assets/a6cfd814-683a-4801-974a-e95907757516)
 ---
 
 ### 2. Autolaunched Flow (Subflow)
 - Create a **New Flow**.
 - Select **Autolaunched Flow (No Trigger)**.
 - Get records based on **Account Country** and **Opportunity Type**.
-- 
-![Image](https://github.com/user-attachments/assets/a6cfd814-683a-4801-974a-e95907757516)
+  
+![Image](https://github.com/user-attachments/assets/71aeeebb-7a01-4cef-a471-e986b2305ba5)
 
 #### Matching Approval Matrices Record
 If a matching record is found, assign the approvers to the Quote.
-
-![Image](https://github.com/user-attachments/assets/71aeeebb-7a01-4cef-a471-e986b2305ba5)
+  ![Image](https://github.com/user-attachments/assets/2598a736-3a83-47c4-ba39-365e9b4b7f20)
+  
 #### No Matching Record Found
 If no matching record exists, send a **Custom Notification**.
 
