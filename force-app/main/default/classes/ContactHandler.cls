@@ -4,6 +4,7 @@ public class ContactHandler {
     public Static void AccountUpdate(list<contact> NewlistContact ,map<id,contact> OldMap ){
         
         set<id> ListAccountId=new set<id>();
+  
         
         for(Contact Contacts:NewListContact){ 
             
