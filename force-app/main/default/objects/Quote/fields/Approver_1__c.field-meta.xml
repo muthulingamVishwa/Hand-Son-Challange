@@ -3,7 +3,7 @@
     <fullName>Approver_1__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <label>Approver 1</label>
-    <referenceTo>User__c</referenceTo>
+    <referenceTo>User</referenceTo>
     <relationshipLabel>Quotes Approver 1</relationshipLabel>
     <relationshipName>QuotesApprover1</relationshipName>
     <required>false</required>

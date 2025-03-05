@@ -3,10 +3,9 @@
     <fullName>First_Level_Approver__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <label>First-Level Approver</label>
-    <referenceTo>User__c</referenceTo>
+    <referenceTo>User</referenceTo>
     <relationshipLabel>Approval Matrices</relationshipLabel>
-    <relationshipName>Approval_Matrices</relationshipName>
+    <relationshipName>ApprovalMatrices</relationshipName>
     <required>false</required>
-    <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>

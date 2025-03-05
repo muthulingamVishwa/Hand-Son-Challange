@@ -3,10 +3,9 @@
     <fullName>Third_Level_Approver__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <label>Third-Level Approver</label>
-    <referenceTo>User__c</referenceTo>
+    <referenceTo>User</referenceTo>
     <relationshipLabel>Approval Matrices (Third-Level Approver)</relationshipLabel>
-    <relationshipName>Approval_Matrices2</relationshipName>
+    <relationshipName>ApprovalMatricesThird</relationshipName>
     <required>false</required>
-    <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>

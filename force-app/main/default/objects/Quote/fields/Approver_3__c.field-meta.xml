@@ -3,9 +3,8 @@
     <fullName>Approver_3__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <label>Approver 3</label>
-    <referenceTo>User__c</referenceTo>
-    <relationshipLabel>Quotes Approver 3</relationshipLabel>
-    <relationshipName>QuotesApprover3</relationshipName>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Quotes2</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Lookup</type>
