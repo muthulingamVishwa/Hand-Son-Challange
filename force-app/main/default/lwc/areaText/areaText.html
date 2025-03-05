@@ -1,0 +1,37 @@
+<template>
+   
+    <template if:true={isViewMode} >
+        <div class="slds-form-element"  onclick={toggleEdit}  
+        onmouseenter={handleMouseEnter} 
+        onmouseleave={handleMouseLeave}>
+            <div class="slds-form-element__control custom-form-element">
+                <div class="slds-form-element__static custom-static-text">
+                    <p>{togglevalue} <lightning-icon if:true={showEditIcon}
+                        icon-name="utility:edit" 
+                        onclick={toggleEdit}
+                        size="xx-small" 
+                        class="slds-float_right" 
+                        alternative-text="Edit">
+                    </lightning-icon></p> 
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <template if:false={isViewMode}>
+            <div class="slds-p-around_small">
+                    <lightning-textarea 
+                    class="textAreaBody"
+                        label="Enter Comment" 
+                        variant="label-hidden"
+                        onblur={saveEdit}
+                        value={togglevalue}
+                        maxlength="140"
+                        >
+                    </lightning-textarea>
+        
+            </div>
+    
+    </template>
+</template>  

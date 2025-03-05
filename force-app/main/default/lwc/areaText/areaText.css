@@ -1,0 +1,13 @@
+.custom-static-text {
+    white-space: normal;     
+    word-break: break-word;  
+    overflow-wrap: break-word; 
+    line-height: 1.5;        
+}
+.custom-static-text p {
+    margin: 0;              
+    padding: 0;           
+}
+.textAreaBody {
+    --sds-c-textarea-sizing-min-height:105px;
+}
