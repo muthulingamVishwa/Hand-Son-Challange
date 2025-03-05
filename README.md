@@ -55,26 +55,47 @@ Implement a solution in Salesforce using Flow and Sub-flow to automatically popu
 
 ---
 # Answer Task 1:
-  step 1 : Enable the Quote object in Quick find 
-     create the three approver Fields in quote Object (lookup to user)
-     create the custom object Approval Matrices
-     cerate Fields in Approval Matrices:
-     - First-Level Approver: Lookup field to the User object
-     - Second-Level Approver: Lookup field to the User object
-     - Third-Level Approver: Lookup field to the User object
-     - Account Country: Picklist (5 random countries) and cerate this fields in Account object.
-     - Opportunity Type: Picklist with the following values and cerate this fields in Opportunity object.:
+ # Approval Matrices Setup
+
+## Step 1: Enable and Configure Objects
+
+1. **Enable the Quote Object**
+   - Search for `Quote` in **Quick Find**.
+   - Enable it if not already enabled.
+
+2. **Create Approver Fields in Quote Object**
+   - Add three **Lookup Fields** (to User):
+     - `First-Level Approver`
+     - `Second-Level Approver`
+     - `Third-Level Approver`
+
+3. **Create Approval Matrices Object**
+   - Create a custom object: `Approval Matrices`.
+   - Add these fields:
+     - `First-Level Approver` (Lookup to User)
+     - `Second-Level Approver` (Lookup to User)
+     - `Third-Level Approver` (Lookup to User)
+     - `Account Country` (Picklist with 5 countries)
+     - `Opportunity Type` (Picklist with:
        - New Business – New Customer
        - New Business – Existing Customer
        - Existing Business - Additional Order
-       - Existing Business - Change Existing Order
+       - Existing Business - Change Existing Order)
 
-Step 2 : new flow 
+4. **Add Fields in Account and Opportunity**
+   - **Account**: `Account Country` (Picklist with 5 countries)
+   - **Opportunity**: `Opportunity Type` (Picklist with the above values)
 
+## Step 2: Create a Flow
+- Go to **Setup** > **Flow**.
+- Create a **New Flow**.
+- select **Record-Triggered Flow**.
+- Assign approvers based on `Approval Matrices`.
+
+![Image](https://github.com/user-attachments/assets/b646c4eb-cca6-46fa-abe7-15454782defe)
            
 
-
-       
+---      
 ### Task 2: Apex Trigger
 
 #### Field Requirements
@@ -106,9 +127,7 @@ Step 2 : new flow
 
 ---
 
-## Answer Ans
-
-Trigger 
+## Trigger Answer
 ---
 ```jsx
 trigger HandlerContact on Contact (before  insert,before update,after insert,after update,after undelete,after delete) {
@@ -236,9 +255,8 @@ Class
           
     }
 }
-```
- 
-
+``` 
+---
 ### Task 3: Lightning Web Component (LWC)
 
 #### Scenario: Custom Datatable for Account Management
