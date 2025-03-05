@@ -86,14 +86,49 @@ Implement a solution in Salesforce using Flow and Sub-flow to automatically popu
    - **Account**: `Account Country` (Picklist with 5 countries)
    - **Opportunity**: `Opportunity Type` (Picklist with the above values)
 
-## Step 2: Create a Flow
-- Go to **Setup** > **Flow**.
-- Create a **New Flow**.
-- select **Record-Triggered Flow**.
-- Assign approvers based on `Approval Matrices`.
+# Approval Assignment Using Flow and Subflow in Salesforce
 
-![Image](https://github.com/user-attachments/assets/b646c4eb-cca6-46fa-abe7-15454782defe)
-           
+## Step 2: Create a Flow
+
+### 1. Record-Triggered Flow (Main Flow)
+- Go to **Setup > Flow**.
+- Click **New Flow** and select **Record-Triggered Flow**.
+- Configure the flow to trigger when a **Quote** record is created.
+- Retrieve the appropriate **Approvers** based on the `Approval Matrices` object.
+
+#### Handling Missing Fields
+If **Account Country** or **Opportunity Type** is NULL, display a **Custom Error Message**.
+
+![Error Handling](https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/PATH_TO_IMAGE/error_handling.png)
+
+#### Fetching Approvers
+If both fields are populated, call a **Subflow** to retrieve the approvers.
+
+![Fetching Approvers](https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/PATH_TO_IMAGE/fetching_approvers.png)
+
+---
+
+### 2. Autolaunched Flow (Subflow)
+- Create a **New Flow**.
+- Select **Autolaunched Flow (No Trigger)**.
+- Get records based on **Account Country** and **Opportunity Type**.
+
+![Get Records](https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/PATH_TO_IMAGE/get_records.png)
+
+#### Matching Approval Matrices Record
+If a matching record is found, assign the approvers to the Quote.
+
+![Mapping Approvers](https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/PATH_TO_IMAGE/mapping_approvers.png)
+
+#### No Matching Record Found
+If no matching record exists, send a **Custom Notification**.
+
+![Custom Notification](https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/PATH_TO_IMAGE/custom_notification.png)
+
+---
+
+### Outcome
+This flow ensures that every **Quote** automatically assigns the correct approvers based on predefined conditions, improving approval efficiency and reducing manual effort. 🚀
 
 ---      
 ### Task 2: Apex Trigger
