@@ -31,10 +31,6 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>India</controllingFieldValue>
-            <valueName>Gujarat</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>India</controllingFieldValue>
             <valueName>Karnataka</valueName>
         </valueSettings>
         <valueSettings>
@@ -48,66 +44,6 @@
         <valueSettings>
             <controllingFieldValue>India</controllingFieldValue>
             <valueName>Uttar Pradesh</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Alberta</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>British Columbia</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Manitoba</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Ontario</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Quebec</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Fukuoka</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Hokkaido</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Kyoto</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Osaka</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Tokyo</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Cork</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Dublin</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Galway</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Kilkenny</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Limerick</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

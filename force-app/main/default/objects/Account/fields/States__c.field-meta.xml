@@ -31,10 +31,6 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>India</controllingFieldValue>
-            <valueName>Gujarat</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>India</controllingFieldValue>
             <valueName>Karnataka</valueName>
         </valueSettings>
         <valueSettings>
@@ -50,64 +46,68 @@
             <valueName>Uttar Pradesh</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Alberta</valueName>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>West Bengal</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>British Columbia</valueName>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Andalusia</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Manitoba</valueName>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Basque Country</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Ontario</valueName>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Catalonia</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Canada</controllingFieldValue>
-            <valueName>Quebec</valueName>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Madrid</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Fukuoka</valueName>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Valencia</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Hokkaido</valueName>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Cornwall</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Kyoto</valueName>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>England</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Osaka</valueName>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Northern Ireland</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Japan</controllingFieldValue>
-            <valueName>Tokyo</valueName>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Scotland</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Cork</valueName>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Wales</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Dublin</valueName>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>California</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Galway</valueName>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Florida</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Kilkenny</valueName>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Illinois</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Ireland</controllingFieldValue>
-            <valueName>Limerick</valueName>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>New York</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Texas</valueName>
         </valueSettings>
     </valueSet>
     <visibleLines>4</visibleLines>

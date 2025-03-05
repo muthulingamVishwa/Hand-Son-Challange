@@ -127,6 +127,14 @@ If no matching record exists, send a **Custom Notification**.
 
 ### Outcome
 This flow ensures that every **Quote** automatically assigns the correct approvers based on predefined conditions, improving approval efficiency and reducing manual effort.
+#### Error Message
+![Image](https://github.com/user-attachments/assets/c7a306a4-1dfa-47a9-b463-aa183c3002d3)
+
+#### Custom Notification
+![image](https://github.com/user-attachments/assets/e74d2c1a-662a-4975-91ab-52d5cc8ce567)
+
+#### Assign the approvers to the Quote
+![image](https://github.com/user-attachments/assets/d880c40a-118d-42a0-902a-543d1f97585e)
 
 
 ---      
