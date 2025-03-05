@@ -54,7 +54,7 @@ Implement a solution in Salesforce using Flow and Sub-flow to automatically popu
 - **Sub-flow**: Encapsulates logic for fetching approvers based on conditions to ensure reusability.
 
 ---
-#Answer Task 1:
+# Answer Task 1:
   step 1 : Enable the Quote object in Quick find 
      create the three approver Fields in quote Object (lookup to user)
      create the custom object Approval Matrices
@@ -106,9 +106,10 @@ Step 2 : new flow
 
 ---
 
-##Answer Ans
+## Answer Ans
 
-trigger 
+Trigger 
+---
 ```jsx
 trigger HandlerContact on Contact (before  insert,before update,after insert,after update,after undelete,after delete) {
 
@@ -136,6 +137,7 @@ trigger HandlerContact on Contact (before  insert,before update,after insert,aft
 ```
 
 Class 
+---
 
 ```jsx
    public class ContactHandler {
