@@ -96,6 +96,7 @@ Implement a solution in Salesforce using Flow and Sub-flow to automatically popu
 - Configure the flow to trigger when a **Quote** record is created.
 - Retrieve the appropriate **Approvers** based on the `Approval Matrices` object.
 
+  ![Image](https://github.com/user-attachments/assets/b646c4eb-cca6-46fa-abe7-15454782defe)
 #### Handling Missing Fields
 If **Account Country** or **Opportunity Type** is NULL, display a **Custom Error Message**.
 
