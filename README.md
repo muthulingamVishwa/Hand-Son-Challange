@@ -329,4 +329,22 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 
 4. **Inline Editing**
    - Users should be able to **edit Account details** directly within the datatable.
+---  
+## Answer 
+
+- Created required fields on account object
+
+wirte apex class to get account record  with requied fields dislpay  
+---
+```jsx
+  public with sharing class getAccounttoDataTable {
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getAccounttoData(){
+            return [select id,name,Account_Activation_Date__c,Status__c,Country__c,Comments__c from account limit 10 ];
+        
+    }
+ 
+}
+```
+
 
