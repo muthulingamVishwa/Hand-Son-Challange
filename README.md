@@ -355,7 +355,7 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 ** CustomTypeData.js **
 ![code 1](https://github.com/user-attachments/assets/bd643bd8-4850-45c9-8c2d-3817aedf6423)
 
-** Editing CustomTypeData.js File ** 
+**Editing CustomTypeData.js File** 
 Modify the CustomTypeData.js file to implement a custom datatable as per your requirements.
 ![Untitled design (1)](https://github.com/user-attachments/assets/aa2f12ce-36ef-4288-8f40-39dafda82837)
 
