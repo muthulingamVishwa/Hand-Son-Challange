@@ -365,6 +365,7 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 
 - After HTML Add file.
 ![image](https://github.com/user-attachments/assets/1eb465a1-90f0-485f-bff4-69d1f85d199f)
+
 ```sh
 CustomEditPicklist.html
 customTypeData.css
