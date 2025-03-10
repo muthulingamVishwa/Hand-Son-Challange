@@ -363,10 +363,25 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
   
 ![image](https://github.com/user-attachments/assets/7c774e42-66da-4d30-bcad-c0c14fbb568d)
 
-Add file.
-![image](https://github.com/user-attachments/assets/342da4a1-55b0-428a-8f74-d404a979a4b2)
+After HTMl Add file.
+```sh
+areatext.html
+CustomEditPicklisthtml
+customTypeData.html
+customTypeData.js
+customTypeData.js-meta.xml
+icon.html
+picklistvalue.html
+```
+## picklistvalue.html
+```HTML
 
-## areatext.html
+    <template>
+        <span class="slds-truncate" title={value}>{value}</span>
+    </template>
+
+```
+### areatext.html
 ```HTMl
 <template>
 
@@ -380,6 +395,54 @@ Add file.
 </template>
 
 ```
+### CustomEditPicklist.html
+```HTML
+<template>
+    <lightning-combobox name="picklist" data-inputable="true" 
+    label={typeAttributes.label} value={editedValue} 
+    placeholder={typeAttributes.placeholder} options={typeAttributes.options}
+    variant='label-hidden'
+        dropdown-alignment="auto"></lightning-combobox>
+</template>
+```
+### icon.html
+```HTML
+<template>
+    <c-icon-display value={value}></c-icon-display>//call child Lwc
+</template>
+
+```
+## iconDisplay (Child Lwc)
+### iconDisplay.html
+```html
+<template>
+    <lightning-icon icon-name={iconName} alternative-text={value} title={value} size="x-small" class="slds-float_right">
+        </lightning-icon>
+</template>
+```
+### iconDisplay.js
+```jsx
+import { LightningElement ,api} from 'lwc';
+
+export default class IconDisplay extends LightningElement {
+    @api value;
+    get iconName() {
+        const iconMap = {
+            'Active': 'action:approval',
+            'Inactive': 'action:reject',
+            'Created': 'action:goal',
+            'Closed': 'action:close'
+        };
+        return iconMap[this.value] || 'utility:question';
+    }
+}
+```
+
+
+
+
+
+
 
 
 
