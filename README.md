@@ -359,6 +359,30 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 - Modify the CustomTypeData.js file to implement a custom datatable as per your requirements.
 ![image](https://github.com/user-attachments/assets/e506d564-6cf0-4769-a8ab-c92c0767b54d)
 
-- Created Custom HTML File on Custom Lightning Datatable 
+- Created Custom HTML File on Custom Lightning Datatable.
+  
 ![image](https://github.com/user-attachments/assets/7c774e42-66da-4d30-bcad-c0c14fbb568d)
+
+Add file.
+![image](https://github.com/user-attachments/assets/342da4a1-55b0-428a-8f74-d404a979a4b2)
+
+## areatext.html
+```HTMl
+<template>
+
+    <div class="row">
+        <h2 class="header">Advanced Examples</h2>
+        <lightning-textarea name="input4" readonly value="initial value" label="Read-only textarea field" ></lightning-textarea>
+        <lightning-textarea name="input5" disabled value="initial value" label="Disabled textarea field" ></lightning-textarea>
+        <lightning-textarea name="input6" required value="initial value" label="Required textarea field with a maximum length of 60 characters" maxlength="60" ></lightning-textarea>
+        <lightning-textarea name="input7" required value="" placeholder="compose your tweet" label="Required textarea field with a maximum length of 140 characters" maxlength="140" message-when-too-long="A maximum of 140 characters are allowed in a tweet." message-when-value-missing="An empty tweet cannot be posted." ></lightning-textarea>
+    </div>
+</template>
+
+```
+
+
+
+
+
 
