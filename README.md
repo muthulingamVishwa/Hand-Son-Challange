@@ -171,7 +171,7 @@ This flow ensures that every **Quote** automatically assigns the correct approve
 
 ## Trigger Answer
 ---
-```jsx
+```apex
 trigger HandlerContact on Contact (before  insert,before update,after insert,after update,after undelete,after delete) {
 
     switch on Trigger.operationtype{
@@ -200,7 +200,7 @@ trigger HandlerContact on Contact (before  insert,before update,after insert,aft
 Class 
 ---
 
-```jsx
+```apex
    public class ContactHandler {
  
     
@@ -335,7 +335,7 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 - Created required fields on account object
 - Apex class retrieves Account records with required fields and makes them available for use in LWC.
 ---
-```jsx
+```apex
 
   public with sharing class getAccounttoDataTable {
     @AuraEnabled(cacheable=true)
@@ -361,47 +361,4 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 
 Created Custom HTML File on Custom Lightning Datatable 
 ![image](https://github.com/user-attachments/assets/7c774e42-66da-4d30-bcad-c0c14fbb568d)
-
-# Project Title
-
-## Description
-Provide a brief description of the project, its purpose, and key features.
-
-## Installation
-Explain how to install the project, including dependencies and setup steps.
-
-```sh
-# Example installation command
-git clone https://github.com/your-repo.git
-cd your-repo
-npm install  # or pip install -r requirements.txt
-```
-
-## Usage
-Describe how to use the project with examples.
-
-```sh
-# Example command to run the project
-npm start  # or python main.py
-```
-
-## Features
-- Feature 1
-- Feature 2
-- Feature 3
-
-## Contributing
-Provide guidelines on how others can contribute.
-
-## License
-Specify the license under which the project is distributed.
-
-## Contact
-Include contact details or links for support.
-
-
-
-
-
-
 
