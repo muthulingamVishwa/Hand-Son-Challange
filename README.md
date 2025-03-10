@@ -333,18 +333,33 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 ## Answer 
 
 - Created required fields on account object
-
-wirte apex class to get account record  with requied fields dislpay  
+- Apex class retrieves Account records with required fields and makes them available for use in LWC.
 ---
 ```jsx
+
   public with sharing class getAccounttoDataTable {
     @AuraEnabled(cacheable=true)
     public static List<Account> getAccounttoData(){
-            return [select id,name,Account_Activation_Date__c,Status__c,Country__c,Comments__c from account limit 10 ];
+            return [select id,
+                           name,
+                           Account_Activation_Date__c,
+                           Status__c,
+                           Country__c,
+                           Comments__c from account limit 10 ];
         
     }
  
 }
 ```
+### Custom Lightning Datatable
+** CustomTypeData.js **
+![code 1](https://github.com/user-attachments/assets/bd643bd8-4850-45c9-8c2d-3817aedf6423)
+
+** Editing CustomTypeData.js File** 
+Modify the CustomTypeData.js file to implement a custom datatable as per your requirements.
+![Untitled design (1)](https://github.com/user-attachments/assets/aa2f12ce-36ef-4288-8f40-39dafda82837)
+
+
+
 
 
