@@ -354,9 +354,10 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 **CustomTypeData.js**
 ![code 1](https://github.com/user-attachments/assets/bd643bd8-4850-45c9-8c2d-3817aedf6423)
 
+
 **Editing CustomTypeData.js File** 
 - Modify the CustomTypeData.js file to implement a custom datatable as per your requirements.
-- ![image](https://github.com/user-attachments/assets/5c571da0-71b3-428a-8033-04fafd46185d)
+![image](https://github.com/user-attachments/assets/5c571da0-71b3-428a-8033-04fafd46185d)
 
 - Created Custom HTML File on Custom Lightning Datatable 
 ![image](https://github.com/user-attachments/assets/7c774e42-66da-4d30-bcad-c0c14fbb568d)
