@@ -364,37 +364,194 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 ![image](https://github.com/user-attachments/assets/7c774e42-66da-4d30-bcad-c0c14fbb568d)
 
 After HTMl Add file.
+![image](https://github.com/user-attachments/assets/1eb465a1-90f0-485f-bff4-69d1f85d199f)
 ```sh
-areatext.html
-CustomEditPicklisthtml
+CustomEditPicklist.html
+customTypeData.css
 customTypeData.html
 customTypeData.js
 customTypeData.js-meta.xml
+displaytexthtml
 icon.html
 picklistvalue.html
 ```
-## picklistvalue.html
-```HTML
+## customTypeData.css
+```css
+:host .slds-table {
+    /* Force columns to respect widths and allow wrapping */
+    table-layout: fixed !important;
+    width: 100% !important;
+}
 
-    <template>
-        <span class="slds-truncate" title={value}>{value}</span>
-    </template>
+:host .slds-table td {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+}
 
 ```
+## customTypeData.js
+```jsx
+import LightningDatatable from 'lightning/datatable';
+import icon from './icon.html';
+import picklistEditable from './CustomEditPicklist.html';
+import picklistNotEditable from './picklistvalue.html';
+import displaytext from './displaytext.html';
+export default class CustomTypeData extends LightningDatatable  {
+static customTypes={
+    picklistColumn: {
+        template: picklistNotEditable,
+        editTemplate: picklistEditable,
+        standardCellLayout: true,
+        typeAttributes : ['label', 'placeholder', 'options', 'value', 'context', 'variant','name']
+    },
+    picklisticon: {
+        template: icon,
+        editTemplate: picklistEditable,
+        standardCellLayout: true,
+        typeAttributes : ['label', 'placeholder', 'options', 'value', 'context', 'variant','name']
+    },
+    Commenttype: {
+        template: displaytext,
+        typeAttributes: ['value', 'context','draftValues']
+    }
+};
+
+
+}
+
+```
+## picklistvalue.html
+```HTML
+<template>
+        <span class="slds-truncate" title={value}>{value}</span>
+    </template>
+```
+## displaytext.html
+```HTML
+
+ <template>
+
+   <!--call Component (Child LWC) areatext (Child Lwc) -->
+   <c-area-text value={typeAttributes.value} context={typeAttributes.context} ></c-area-text>
+
+</template>
+```
+## areatext (Child Lwc)
 ### areatext.html
 ```HTMl
 <template>
+   
+    <template if:true={isViewMode} >
+        <div class="slds-form-element"  onclick={toggleEdit}  
+        onmouseenter={handleMouseEnter} 
+        onmouseleave={handleMouseLeave}>
+            <div class="slds-form-element__control custom-form-element">
+                <div class="slds-form-element__static custom-static-text">
+                    <p>{togglevalue} <lightning-icon if:true={showEditIcon}
+                        icon-name="utility:edit" 
+                        onclick={toggleEdit}
+                        size="xx-small" 
+                        class="slds-float_right" 
+                        alternative-text="Edit">
+                    </lightning-icon></p> 
+                </div>
+            </div>
+        </div>
+    </template>
 
-    <div class="row">
-        <h2 class="header">Advanced Examples</h2>
-        <lightning-textarea name="input4" readonly value="initial value" label="Read-only textarea field" ></lightning-textarea>
-        <lightning-textarea name="input5" disabled value="initial value" label="Disabled textarea field" ></lightning-textarea>
-        <lightning-textarea name="input6" required value="initial value" label="Required textarea field with a maximum length of 60 characters" maxlength="60" ></lightning-textarea>
-        <lightning-textarea name="input7" required value="" placeholder="compose your tweet" label="Required textarea field with a maximum length of 140 characters" maxlength="140" message-when-too-long="A maximum of 140 characters are allowed in a tweet." message-when-value-missing="An empty tweet cannot be posted." ></lightning-textarea>
-    </div>
-</template>
+
+    <template if:false={isViewMode}>
+            <div class="slds-p-around_small">
+                    <lightning-textarea 
+                    class="textAreaBody"
+                        label="Enter Comment" 
+                        variant="label-hidden"
+                        onblur={saveEdit}
+                        value={togglevalue}
+                        maxlength="140"
+                        >
+                    </lightning-textarea>
+        
+            </div>
+    
+    </template>
+</template>  
 
 ```
+## areaText.css
+```css
+
+.custom-static-text {
+    white-space: normal;     
+    word-break: break-word;  
+    overflow-wrap: break-word; 
+    line-height: 1.5;        
+}
+.custom-static-text p {
+    margin: 0;              
+    padding: 0;           
+}
+.textAreaBody {
+    --sds-c-textarea-sizing-min-height:105px;
+}
+```
+## areaText.js
+```jsx
+import { LightningElement,api,track } from 'lwc';
+
+export default class AreaText extends LightningElement {
+    @api value;
+    @api context;
+    @track togglevalue;
+    @track isViewMode = true; 
+
+    @track showEditIcon = false;
+   renderedCallback() {
+        this.togglevalue = this.value;
+    }
+  
+    handleMouseLeave() {
+        this.showEditIcon = false;
+    }
+
+    handleMouseEnter() {
+        this.showEditIcon = true;
+    }
+    toggleEdit() {
+        this.isViewMode = !this.isViewMode;
+        this.showEditIcon = false;
+    }
+
+    saveEdit(event) {
+        this.isViewMode = true; 
+        event.preventDefault();
+        
+        let textarea = this.template.querySelector('lightning-textarea');
+    
+        if (textarea.value !== this.value) {
+            this.value = textarea.value;
+            this.togglevalue = textarea.value;
+        
+
+        const toggel = new CustomEvent('changecommunt', {
+            composed:true,
+            bubbles: true,
+            cancelable: true,
+            detail: {
+                data: { context: this.context, value: textarea.value } 
+            }
+        });
+        this.dispatchEvent(toggel);
+    }
+        
+        
+    }
+
+
+}
+```
+
 ### CustomEditPicklist.html
 ```HTML
 <template>
@@ -408,7 +565,9 @@ picklistvalue.html
 ### icon.html
 ```HTML
 <template>
-    <c-icon-display value={value}></c-icon-display>//call child Lwc
+
+   <!-- Component (Child LWC) -->
+    <c-icon-display value={value}></c-icon-display>
 </template>
 
 ```
