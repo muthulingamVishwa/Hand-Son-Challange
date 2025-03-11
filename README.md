@@ -803,7 +803,18 @@ handleCancel(event){
 	</targetConfigs>
 </LightningComponentBundle>
 ```
+---
+# Output
 
+![image](https://github.com/user-attachments/assets/67bf6af8-03f6-4120-8553-9edf70974e99)
+
+
+![image](https://github.com/user-attachments/assets/752a4ade-a111-4dd2-976f-ac9254d71bb9)
+
+![image](https://github.com/user-attachments/assets/e3994c18-464b-4f2c-8118-037000aba64f)
+
+
+https://github.com/user-attachments/assets/a0e026fa-a4d6-4c71-925c-93ff9ba7a1bd
 
 
 
