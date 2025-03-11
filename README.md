@@ -736,9 +736,10 @@ export default class AccountDataTable extends LightningElement {
         };
     
         let draftValues = this.template.querySelector("c-custom-type-data").draftValues || [];
-        draftValues = [...draftValues, updatedItem];
+         let updatedDraftValues = draftValues.some(item => item.Id === updatedItem.Id) ? draftValues.map(item => item.Id === updatedItem.Id ? { ...item, ...updatedItem } : item): [...draftValues, updatedItem];
     
-        this.template.querySelector("c-custom-type-data").draftValues = draftValues;
+        this.template.querySelector("c-custom-type-data").draftValues = updatedDraftValues;
+    
     }
 
  
