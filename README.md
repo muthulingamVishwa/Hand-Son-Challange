@@ -362,8 +362,9 @@ Create a tab named **"LWC Accounts"** to display and manage **Account** records 
 - Created Custom HTML File on Custom Lightning Datatable.
   
 ![image](https://github.com/user-attachments/assets/7c774e42-66da-4d30-bcad-c0c14fbb568d)
----
+
 - After HTML Add file.
+---
 ![image](https://github.com/user-attachments/assets/1eb465a1-90f0-485f-bff4-69d1f85d199f)
 
 ```sh
